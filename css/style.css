@@ -64,7 +64,7 @@
 }
 
 .nav .container_nav{
-    position: relative;
+    
     height: 100%;
 }
 
@@ -116,15 +116,17 @@
 
 
 
+
 /*encabezado*/
 
 .encabezado{
     background-color:#F8FF9E;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     grid-area: encabezado ;
-    margin-top: 20px;
+    margin-top: 5px;
     font-size: 16px;
     font-weight: 400;
     text-align: center;
@@ -152,8 +154,6 @@
 
 
 .main{
-   background-image: url(../img/Diseño\ De\ Perro2.jpg);
-  background-size: contain;
     grid-area: main;
   
     
@@ -226,10 +226,9 @@
 .categorias{
   background-color: #DBF9F6;  
     grid-area: categorias;
-    max-width: 95%;
+    max-width: 100%;
     align-items: center;
-    margin-top: 10px;
-    margin-left: 38px;
+    margin-top:10px;
     border-radius: 30px;
 
     
@@ -286,18 +285,21 @@
    gap: 10px;
    align-items: center;
    border-radius: 30px;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
   }
 
   .sliderbar h2{
-    background-color: #4cf78d;
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 35px;
+    font-weight: 900;
     max-width: 80%;
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     text-align: center;
     margin-left: 25px;
     border-radius: 30px;
+   
     
   }
 
@@ -412,9 +414,9 @@ margin-left: 30px;
     display: flex;
     justify-content: space-between;
     border-radius: 30px;
-    margin-top: 1opx;
     background-color: #F8FF9E;
     align-items: center;
+    flex-wrap: wrap;
     
 }
 
@@ -534,8 +536,7 @@ margin-left: 30px;
    text-decoration: none;
    background-color: #4cf78d;
    border-radius: 20px;
-   border: solid 1px  black;
-   max-width: 28%;
+   border: solid 1px  black;  
    align-items: center;
    margin-bottom: 10px;
    color: black;
@@ -584,18 +585,19 @@ margin-left: 30px;
 
 .container1{
     
-    display: grid;  
-     height: 100%;
-    grid-template-rows: 0.2fr 0.2fr 0.8fr 1fr 1fr 1.5fr 0.6fr 0.9fr;
+    display: grid; 
+    height: 100%; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.1fr 0.1fr 0.4fr 1fr 0.6fr 0.6fr 0.6fr;
     grid-template-areas: 
-    "nav nav nav nav"  
-    "encabezado encabezado encabezado encabezado"
-    "marcas marcas marcas marcas"
-    "destacados destacados destacados destacados" 
-    " medicina medicina medicina medicina"
-    " productos productos productos productos "
-    "invierno invierno invierno invierno "
-    "footer footer footer footer";
+    "nav nav"  
+    "marcas marcas "
+    "encabezado  encabezado"
+    "destacados destacados" 
+    " medicina medicina"
+    " productos productos "
+    "invierno invierno "
+    "footer footer ";
     grid-gap: 0.2rem;
 
 }
@@ -603,29 +605,23 @@ margin-left: 30px;
 .nuestras-marcas{
     grid-area: marcas;
     font-family:"Poppins", sans-serif;
-    background-color: #DBF9F6;  
-    max-width: 95%;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 38px;
+    margin:20px;
     border-radius: 30px;
+    box-shadow: 3px 1px 10px 9px rgba(15,11,11,0.49);
 
-}
+    }
 
-.nuestras-marcas .titulo-marcas{
-   max-width: 40%;
-   background-color: #F8FF9E;
-   margin-left: 375px;
-   margin-top: 10px;
-   border-radius: 30px;
-}
-.nuestras-marcas h3{
-    text-align: center;
+ .titulo-marcas{
+   text-align: center;
     font-size: 50px;
     font-weight: 600;
     font-family:"Poppins", sans-serif;
     padding: 10px;
-}
+    text-align: center;
+   border-radius: 30px;
+ 
+  }
+
 
    .marcas-container{
     display: flex;
@@ -633,13 +629,14 @@ margin-left: 30px;
     align-items: center;
     justify-content: space-between;
     
+    
    }
 
    .marcas-img  img {
     width: 100px;
     margin: 20px;
     border-radius: 100px;
-    border: 1px solid black;
+    border: 2px solid black;
     transition: transform 0.3s ease ;
        }
 
@@ -650,16 +647,18 @@ margin-left: 30px;
 
 .destacados{
     grid-area: destacados;
-
+    max-height: fit-content;
+    box-shadow: 3px 1px 10px 9px rgba(15,11,11,0.49);
+    max-width: 1600px;
+    border-radius: 30px;
+    margin: 40px;
 }
 
 .destacados-container{
     display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-template-areas: 
-    "destacados1 destacados2 destacados3";
+    "destacados1 destacados2 destacados3 destacados4";
     gap: 0.5rem;
 }
 
@@ -703,6 +702,12 @@ margin-left: 30px;
     text-align: center;
 }
 
+.destacados4{
+    grid-area: destacados4;
+    margin-top: 20px;
+    text-align: center;
+}
+
 .medicina-veterinaria{
     grid-area: medicina;
     background-image: url(../img/veterinaria.jpg);
@@ -710,7 +715,9 @@ margin-left: 30px;
     background-repeat: no-repeat;
     border-radius: 20px;
     text-align: end;
-   
+    max-width: 1800px;
+    margin: 10px;
+
 }
 
 .medicina-veterinaria h3{
@@ -745,6 +752,7 @@ margin-left: 30px;
 
 .nuevos-productos{
     grid-area: productos;
+   
     
 
     }
@@ -753,19 +761,21 @@ margin-left: 30px;
 
 .lonuevo-container{
     margin-top: 5px;
+    margin-top: 5px;
     display: grid;
     height: 100%;
-    grid-template-columns: 0.8fr 1fr 1fr;
-    grid-template-rows: 0.8fr 0.9fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 0.8fr;
     grid-template-areas: 
     "lonuevo nuevo1 nuevo2"
     "lonuevo nuevo3 nuevo4";
     gap: 0.5rem;
-}
+
+    }
 
 .lonuevo{
-    grid-area: lonuevo;
     color:black;
+    grid-area: lonuevo;
    
 
     }
@@ -780,32 +790,42 @@ margin-left: 30px;
 
 .nuevo1{
     background-color:#DBF9F6;
-     grid-area: nuevo1 ;
      border: solid 1px #4cf78d;
-}
+     grid-area: nuevo1;
+     box-shadow: -8px 4px 8px -1px rgba(3,237,211,0.77);
+     margin: 10px;
+
+     }
 
 .nuevo2{
     background-color: #DBF9F6;
-    grid-area: nuevo2;
     border: solid 1px #4cf78d;
+    grid-area: nuevo2;
+    box-shadow: -8px 4px 8px -1px rgba(3,237,211,0.77);
+    margin: 10px;
 }
 
 .nuevo3{
     background-color:#DBF9F6;
-    grid-area: nuevo3;
     border: solid 1px #4cf78d;
+    grid-area: nuevo3;
+    box-shadow: -8px 4px 8px -1px rgba(3,237,211,0.77);
+    margin: 10px;
 }
 
 .nuevo4{
    background-color: #DBF9F6;
-    grid-area: nuevo4;
     border: solid 1px #4cf78d;
+    grid-area: nuevo4;
+    box-shadow: -8px 4px 8px -1px rgba(3,237,211,0.77);
+    margin: 10px;
 }
 
 
 .invierno{
     grid-area: invierno;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 10px;
@@ -957,17 +977,16 @@ margin-left: 30px;
 
 .blog-container{
     display: grid;  
-    height: 100%;
-   grid-template-rows: 0.2fr 0.2fr 0.5fr 0.7fr 0.8fr 0.8fr 0.8fr 0.9fr;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+   grid-template-rows: 0.2fr 0.2fr 0.3fr 0.5fr 0.5fr 0.5fr;
    grid-template-areas: 
-   "nav nav nav nav"  
-   "encabezado encabezado encabezado encabezado"
-   "blog blog blog blog"
-   "articulo1 articulo1 articulo1 articulo1" 
-   " articulo2 articulo2 articulo2 articulo2"
-   "articulo3 articulo3 articulo3 articulo3"
-   "articulo4 articulo4 articulo4 articulo4 "
-   "footer footer footer footer";
+   "nav nav"  
+   "encabezado encabezado"
+   "blog blog"
+   "articulo1 articulo2" 
+   " articulo3 articulo4"
+   "footer footer";
    grid-gap: 0.2rem;
 
    }
@@ -981,7 +1000,7 @@ margin-left: 30px;
    .blog h1{
     font-size: 60px;
     font-weight: 900;
-    margin-top: 10px;
+    margin-top: 60px;
     text-align: center;
     align-items: center;
     font-family: "Poppins", sans-serif;
@@ -1001,12 +1020,14 @@ margin-left: 30px;
    .articulo1{
     grid-area: articulo1;
     background-color: #F8FF9E;
-    display: flex;
-    justify-content: space-between;
     border-radius: 30px;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
    }
+
    .explicacion{
        text-align: center;
       }
@@ -1027,6 +1048,7 @@ margin-left: 30px;
     font-family: "Poppins", sans-serif;
     text-align: start;
     margin: 10px;
+    text-align: center;
    }
 
    .explicacion i{
@@ -1048,29 +1070,37 @@ margin-left: 30px;
    .imagen-blog img{
     width: 300px;
     border-radius: 30px;
-    align-items: center;
+    margin: 20px;
+    
+   }
+
+   .imagen-blog2 img{
+    width: 260px;
+    border-radius: 30px;
+    margin: auto;
     
    }
 
    .articulo2{
     grid-area: articulo2;
     background-color: #F8FF9E;
-    display: flex;
-    justify-content: space-between;
     border-radius: 30px;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-   
-
    }
+
 
    .articulo3{
     grid-area: articulo3;
     background-color: #F8FF9E;
-    display: flex;
-    justify-content: space-between;
     border-radius: 30px;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     
 
@@ -1078,14 +1108,13 @@ margin-left: 30px;
    
    .articulo4{
     grid-area: articulo4;
-    background-color:#F8FF9E;
-    display: flex;
-    justify-content: space-between;
+    background-color: #F8FF9E;
     border-radius: 30px;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    
-
    }
 
 
@@ -1225,1226 +1254,344 @@ footer .formulario .newslatterBoton{
 
 
 
-@media  screen and (max-width:550px){
-    
+@media screen and (max-width:768px){
+
     .container{
-    
-        display: grid;  
-         height: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows:  0.1px 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-columns: 1fr ;
+        grid-template-rows:repeat(9,auto);
         grid-template-areas: 
-        "nav"  
-        "encabezado"
-        "categorias"
-        " main" 
-        "peluqueria"
-        "sliderbar"
-        "content1 "
-        "content2 "
-        "content3"
-        "content4"
-         "content5"
-        "content6"
-        "footer ";
-       
+        "nav nav " 
+        "encabezado encabezado" 
+        "categorias categorias"
+        "main main" 
+        "peluqueria peluqueria"
+        "sliderbar sliderbar"
+        "content1 content2  "
+        "content3 content4"
+       "content5 content6 " 
+        "footer footer"
+    }
     
+   
+    .nav .logo{
+       display: none;
     }
 
-    .nav{
-        background-color: #DBF9F6;
-        grid-area: nav;
-        width: 100%;
-        height: 90px;
-        font-family: "Poppins", sans-serif;
-        position: fixed;
-        top:0;
-        right: 0;
-        z-index: 100;
-      
-    }
-    .container_header{
-        height: 100%;
-        display: flex;
-        margin: auto;
-    }
-    
-    .nav .logo{
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: trasnform 0.3s ease;
-    }
-    
-    .nav .logo:hover img{
-        transform: scale(1.1);
-    }
-    
-    .nav .logo img{
-        width: 90px;
-    }
-    
-    .nav .container_nav{
-        position: relative;
-        height: 100%;
-    }
-    
-    .navbar{
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-    
-    .navbar i{
-        font-size: 16px;
-        margin: 20px ;
-        transition: 0.3ms;
-        cursor: pointer;
-    }
-    
-    .navbar i:hover{
-        color:#4cf78d ;
-    }
-    
-    .navbar ul{
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    
     .navbar ul li{
-        margin: 0px 20px;
-        list-style: none;
-        font-weight: 300;
+        margin: 0px 10px;
+        
     }
-    
-    
-    .navbar ul li a{
-    
-        font-size: 16px;
-        color:black;
-        font-weight: 700;
-        transition: 0.3ms;
-        text-decoration: none;
-    }
-    
-    
-    .navbar ul li a:hover{
-        color:#4cf78d ;
-    }
-    
-    
-    
-    /*encabezado*/
-    
     .encabezado{
-        background-color:#F8FF9E;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        grid-area: encabezado ;
-        margin-top: 20px;
-        font-size: 16px;
-        font-weight: 400;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: italic;
-      }
-    
-    
-    .encabezado p{
-        margin-left: 20px;
+        align-items:end;
+        margin-top:90px;
+        font-size:9px;
     }
-    
-    .encabezado .encabezado_despacho{
+    .navbar i{
         display: flex;
-        justify-content:start;
-        margin-right: 20px;
-       align-items: center;
     }
-    
-    
-    /* menu-contenido*/
-    
-    
-    
     .main{
-       background-image: url(../img/Diseño\ De\ Perro2.jpg);
-      background-size: contain;
-        grid-area: main;
-      
-        
+        background-image:none;
     }
-    
+
     .container__total1{
-        width: 100%;
-        padding-bottom: 60px;
-        font-family: "Poppins", sans-serif;
-        margin-top: 100px;  
-        
-    }
-    
-    .container__total2{
-        max-width: 1100px;
-        margin: auto;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-    }
-    
-    .container__total1 .container_info{
-        max-width: 400px;
-        margin-top: 70px;
-        z-index: 2;
-        
-       
-    }
-    
-    
-    .container__total1 h1{
-        max-width: 400px;
-        font-size: 90px;
-        font-weight: 900;
-        color: black;
-        font-family: "Poppins", sans-serif;
-    
-    }
-    
-    .container__total1 h2{
-        font-size: 70px;
-        font-weight: 900;
-        color:aquamarine;
-        font-family: "Poppins", sans-serif;
-        margin-top: -30px;
-    
-    }
-    
-    .container__total1 p{
-        margin-top: 10px;
-        color: black;
-        font-weight: 600;
-    }
-    
-    .container__img{
-       position: relative; 
-    
-    }
-    
-    .container__img img{
-        position: absolute;
-       margin-top: 13px;
-        right: 0px;
-        width: 580px;
-    }
-    
-    
-    
-    .categorias{
-      background-color: #DBF9F6;  
-        grid-area: categorias;
-        max-width: 95%;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 38px;
-        border-radius: 30px;
-    
-        
-    }
-    
-    .containercards{
-        padding: 10px;
-        padding-bottom: 10px;
-        margin-top: 5px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-between;
-        border-radius: 20px;
-     }
-    
-     .containercards h3{
-        font-size: 26px;
-        font-weight: 400;
-        text-align: center;
-        margin-top: 10px;
-        color: black;
-        font-family: "Poppins", sans-serif;
-        transition: 0.3ms;
-     }
-    
-     .containercards h3:hover{
-        color: #4cf78d;
-     }
-    
-     .containercards a{
-        text-decoration: none;
-        font-family: "Poppins", sans-serif;
-        transition: 0.3ms;
-        
-     }
-    
-    .cartasimg img {
-        width: 100px;
-        border-radius: 100px;
-        margin: 10px;
-        transition: transform 0.3s ease ;
-           }
-    
-    .cartasimg:hover img{
-        transform: scale(1.2);
-    }
-    
-    /*silderbar*/
-    
-    .sliderbar{
-      background-color: #F8FF9E;
-       grid-area: sliderbar;
-       margin-top:50px;
-       gap: 10px;
-       align-items: center;
-       border-radius: 30px;
-      }
-    
-      .sliderbar h2{
-        background-color: #4cf78d;
-        font-size: 40px;
-        font-weight: 500;
-        max-width: 80%;
-        font-family: "Poppins", sans-serif;
-        text-transform: uppercase;
-        text-align: center;
-        margin-left: 25px;
-        border-radius: 30px;
-        
-      }
-    
-      .sliderbar h3{
-        font-size: 30px;
-        font-weight: 500;
-        font-family: "Poppins", sans-serif;
-        text-transform: uppercase;
-        text-align: center;
-      }
-    
-     
-    
-    .marca1{
-       
-        width: 250px;
-        height: 300px;
-        margin-top: 70px;
-        margin-left: 30px;
-        text-align: center;
-        justify-content: center;
-        
-    }
-    
-    .marca1 img{
-        width: 100px;
-        
-    }
-    .marca2{
-       
-        width: 250px;
-        height: 300px;
-        margin-top: 50px;
-        margin-left: 30px;
-    }
-    
-    .marca2 img{
-        width: 250px;
-        height: 300px;
-        border-radius: 40px;
-    }
-    
-    .marca3{
-        
-        width: 250px;
-        height: 300px;
-        margin-top: 50px;
-        margin-left: 30px;
-    
-        }
-    
-     .marca3 img{
-            width: 250px;
-            height: 300px;
-            border-radius: 40px;
-    
-       }
-    
-    .marca4{
-     
-     width: 250px;
-     height: 300px;
-     margin-top: 50px;
-    margin-left: 30px;
-    }
-    
-    .marca4 img{
-        width: 250px;
-        height: 300px;
-        border-radius: 40px;
-    
-    }
-    
-    .contacto-adopcion{
-        text-align: center;
-    }
-    
-    
-    .contacto-adopcion p{
-        padding: 10px;
-        color: black;
-        font-size: 38px;
-        font-weight: 700;
-        text-align:center ;
-        margin-top: 50px ;
-        font-family: "Poppins", sans-serif;
-        
-       
-        
-    }
-    
-    .contacto-adopcion a{
-        padding: 10px;
-        margin-top: 40px;
-        text-decoration: none;
-        font-size: 20px;
-        background-color: #4cf78d; 
-        border-radius: 20px;  
-        color: black;
-        border: 1px solid black;
-       
-    }
-    
-    .contacto-adopcion a:hover{
-       background-color: #DBF9F6;
-       color: #4cf78d;
-    }
-    
-    
-    .peluqueria{
-        grid-area: peluqueria;
-        display: flex;
-        justify-content: space-between;
-        border-radius: 30px;
-        margin-top: 1opx;
-        background-color: #F8FF9E;
-        align-items: center;
-        
-    }
-    
-    .peluqueria .peluqueria_canina1 img{
-        width: 450px;
-        margin-top: 5px;
-        margin-left: 10px;
-        border-radius: 20px;
-        cursor: pointer;
-        border: 1px solid  #4cf78d;
-        transition: transform 0.3s ease;
-    }
-    
-    .peluqueria .peluqueria_canina1:hover img{
-        transform: scale(1.2);
-    }
-    
-    .peluqueria .peluqueria_canina2 img{
-        width: 510px;
-        margin-top: 5px;
-        margin-right: 10px;
-        border-radius: 20px;
-        cursor: pointer;
-        border: 1px solid  #4cf78d;
-        transition: transform 0.3s ease;
-    
-    }
-    
-    .peluqueria .peluqueria_canina2:hover img{
-    
-        transform: scale(1.2);
-    }
-    
-    .peluqueria h4{
-        margin-bottom: 10px;
-    }
-    
-    
-    /*contenido*/
-    
-    .content1{
-       
-        grid-area: content1;
-        color:black;
-        font-size: 28PX;
-        font-weight: 600;
-        font-family: "Poppins", sans-serif;
-        text-align: center;
-    }
-    .content1 img{
-        width: 180px;
-    }
-    .content1 p{
-        color: #4cf78d;
-        font-weight: 700;
-    }
-    
-    
-    
-    .content2{
-        background-color: #DBF9F6;
-        grid-area: content2;
-        border-radius: 30px;
-        
-    }
-    
-    
-    .carta-img{
-        width: 100%;
-        height: 300px;
-        border-radius: 10px;
-        padding: 5px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin: 2px;
-        position: relative;
-        cursor: pointer;
-    }
-    
-    .carta-img img{
-        width: 200px;
-        display: block;
-         height: 200px;
-         border-radius: 10px;
-         border: solid 1px #4cf78d;
-         transition: transform 0,3s ease;
+        width:100%;
+        padding:0;
+        font-family:"Poppins", sans-serif;
+        margin-top:-80px; 
          
     }
     
-    .carta-img:hover img{
-        transform: scale(1.1);
-    }
-    .carta-img h3{
-        text-align: center;
-        font-size: 16px;
-        font-weight: 600;
-        margin-top: 8px;
-    }
-    .descripcion-carta{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
-    .descripcion-carta p{
-       
-        font-size: 14px;
-        font-weight: 400;
-        text-align: center;
-        font-family:"Poppins", sans-serif;
-    }
-    
-    .descripcion-carta .btn{
-       text-decoration: none;
-       background-color: #4cf78d;
-       border-radius: 20px;
-       border: solid 1px  black;
-       max-width: 28%;
-       align-items: center;
-       margin-bottom: 10px;
-       color: black;
-       padding: 8px;
-       transition: 0.3S;
-    }
-    
-    .btn:hover{
-      background-color: #DBF9F6;
-      color: #4cf78d;
-    }
-    
-    
-    .content3{
-        background-color: #DBF9F6;
-        grid-area: content3;
-       
-        border-radius: 30px;
-        
-    
-    }
-    
-    .content4{
-        background-color: #DBF9F6;
-        grid-area: content4;
-        
-        border-radius: 30px;
-    }
-    
-    .content5{
-        background-color: #DBF9F6;
-        grid-area: content5;
-        
-        border-radius: 30px;
-    }
-    
-    .content6{
-        background-color: #DBF9F6;
-        grid-area: content6;
-        
-        border-radius: 30px;
-    }
-    
-    
-    /*productos*/
-    
-    .container1{
-        
-        display: grid;  
-         height: 100%;
-        grid-template-rows: 0.2fr 0.2fr 0.8fr 1fr 1fr 1.5fr 0.6fr 0.9fr;
-        grid-template-areas: 
-        "nav nav nav nav"  
-        "encabezado encabezado encabezado encabezado"
-        "marcas marcas marcas marcas"
-        "destacados destacados destacados destacados" 
-        " medicina medicina medicina medicina"
-        " productos productos productos productos "
-        "invierno invierno invierno invierno "
-        "footer footer footer footer";
-        grid-gap: 0.2rem;
-    
-    }
-    
-    .nuestras-marcas{
-        grid-area: marcas;
-        font-family:"Poppins", sans-serif;
-        background-color: #DBF9F6;  
-        max-width: 95%;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 38px;
-        border-radius: 30px;
-    
-    }
-    
-    .nuestras-marcas .titulo-marcas{
-       max-width: 40%;
-       background-color: #F8FF9E;
-       margin-left: 375px;
-       margin-top: 10px;
-       border-radius: 30px;
-    }
-    .nuestras-marcas h3{
-        text-align: center;
-        font-size: 50px;
-        font-weight: 600;
-        font-family:"Poppins", sans-serif;
-        padding: 10px;
-    }
-    
-       .marcas-container{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        
-       }
-    
-       .marcas-img  img {
-        width: 100px;
-        margin: 20px;
-        border-radius: 100px;
-        border: 1px solid black;
-        transition: transform 0.3s ease ;
-           }
-    
-    .marcas-img:hover img{
-        transform: scale(1.2);
-    }
-    
-    
-    .destacados{
-        grid-area: destacados;
-    
-    }
-    
-    .destacados-container{
-        display: grid;
-        height: 100%;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-        "destacados1 destacados2 destacados3";
-        gap: 0.5rem;
-    }
-    
-    .destacados1{
-        grid-area: destacados1;
-        margin-top: 20px;
-        text-align: center;
-        }
-    .destacados-categorias{
-        margin: 5px;
-        text-decoration: none;
-        font-size: 22px;
-        font-family:"Poppins", sans-serif;
-        justify-content: space-between;
-        
-    }
-    .destacados-categorias h3{
-        color: black;
-    }
-    
-     .destacados-categorias img {
-        width: 100px;
-        
-    }
-     .destacados-categorias:hover img{
-        transform: scale(1.2);
-        transition: transform 0.3s ease;
-    }
-    
-    
-    .destacados2{
-        grid-area: destacados2;
-        margin-top: 20px;
-        text-align: center;
-        color: black;
-    }
-    
-    .destacados3{
-        grid-area: destacados3;
-        margin-top: 20px;
-        text-align: center;
-    }
-    
-    .medicina-veterinaria{
-        grid-area: medicina;
-        background-image: url(../img/veterinaria.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: 20px;
-        text-align: end;
-       
-    }
-    
-    .medicina-veterinaria h3{
-        margin-top: 90px;
-        margin-right: 20px;
-        font-size: 40px;
-        padding: 2px;
-        font-weight: 900;
-        font-family:"Poppins", sans-serif;
-        
-    }
-    
-    .medicina-veterinaria a{
-        text-decoration: none;
-        margin-right: 90px;
-        font-size: 20px;
-        font-weight: 900;
-        font-family:"Poppins", sans-serif;
-        padding: 8px;
-        background-color: #4caf50;
-        border-radius: 20px;
-        border: 1px solid black;
-        color: black;
-        
-    }
-    
-    .medicina-veterinaria a:hover{
-        background-color: white;
-    }
-    
-    
-    
-    .nuevos-productos{
-        grid-area: productos;
-        
-    
-        }
-    
-        
-    
-    .lonuevo-container{
-        margin-top: 5px;
-        display: grid;
-        height: 100%;
-        grid-template-columns: 0.8fr 1fr 1fr;
-        grid-template-rows: 0.8fr 0.9fr;
-        grid-template-areas: 
-        "lonuevo nuevo1 nuevo2"
-        "lonuevo nuevo3 nuevo4";
-        gap: 0.5rem;
-    }
-    
-    .lonuevo{
-        grid-area: lonuevo;
-        color:black;
-       
-    
-        }
-    
-    .lonuevo h3{
-        margin-top: 160px;
-        font-size: 100PX;
-        font-weight: 900;
-        font-family: "Poppins", sans-serif;
-        text-align: center;
-    }
-    
-    .nuevo1{
-        background-color:#DBF9F6;
-         grid-area: nuevo1 ;
-         border: solid 1px #4cf78d;
-    }
-    
-    .nuevo2{
-        background-color: #DBF9F6;
-        grid-area: nuevo2;
-        border: solid 1px #4cf78d;
-    }
-    
-    .nuevo3{
-        background-color:#DBF9F6;
-        grid-area: nuevo3;
-        border: solid 1px #4cf78d;
-    }
-    
-    .nuevo4{
-       background-color: #DBF9F6;
-        grid-area: nuevo4;
-        border: solid 1px #4cf78d;
-    }
-    
-    
-    .invierno{
-        grid-area: invierno;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 10px;
-    }
-    
-    .invierno a img{
-        width: 300px;
-        transition: transform 0.3s ease;
-    }
-    
-    .invierno a:hover img{
-        transform: scale(1.2);
-    }
-    
-    
-    
-    .formularioImagen{
-        width: 100%;
-        padding-bottom: 60px;
-        font-family: "Poppins", sans-serif;
-        margin-top: 150px;  
-        }
+    .container__img{
+        position:absolute; 
      
-    .containerFormimg{
-        max-width: 1100px;
-        margin: auto;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        background-color: #F8FF9E;
-        border-radius: 20px;
-    }
-    
-    .formularioContacto{
-        width: 400px;
-        margin-left: 50px;
-        padding: 20px;
-        background-color: #f2f2f2;
-        border-radius: 5px;
-        z-index: 2;
+     }
+     
+     .container__img img{
+        position:relative;
+        margin-top:105px;
+       margin-left:180px;
+         width: 300px;
+     }
+
+     .container__total1 .container_info p{
+        text-align:center;
+        font-size:20px;
         
-    }
+     }
+     
+     .categorias{
+        background-color: #DBF9F6;  
+          grid-area:categorias;
+          max-width:100%;
+          align-items:center; 
     
-    .formularioContacto h3{
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    
-    .formularioContacto label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
       }
-    
-      input[type="text"],
-      input[type="email"],
-      input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 3px;
-        border: 1px solid #ccc;
-      }
-    
-      input[type="submit"] {
-        width: 100%;
-        margin-top: 10px;
-        padding: 10px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-      }
-    
-      input[type="submit"]:hover {
-        background-color: #45a049;
-      }
-    
-    .imagenQr{
-        position: relative;
-    }
-    
-    .imagenQr img{
-        position: absolute;
-        bottom: 100px;
-        right: 0px;
-        width: 400px;
-        border-radius: 40px;
-    }
-    
-    .contactoTitulo h1{
-        margin-top: 100px;
-        font-size: 36px;
-        font-weight: 900;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        color: black;
-    }
-    
-    .contactoTitulo h2{
-        font-size: 30px;
-        font-weight: 900;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        color: aquamarine;
-    }
-    
-    .imagenQr .tituloApp{
-        color:black;
-        margin-right: 28px;
-        
-    }
-    
-    .menusucursales{
-        width: 100%;
-        display: flex;
+
+      .containercards{
         justify-content: center;
-        margin: 30px;
-        
-    }
-    
-    .menutiendas h1{
-        font-size: 40px;
-        font-weight: 900;
-        font-family: "Poppins", sans-serif;
-        color: black;
-        text-align: center;
-    }
-    
-    .titulo-tiendas h2{
-        font-size: 30px;
-        font-weight: 220;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-    
-    
-    }
-    .menutiendas{
-        margin-top: 100px;
-    }
-    .menutiendas .horario-tiendas p {
-       font-size: 30px;
-       font-weight: 200;
-        text-align: center;
-    
-    }
-    
-    .blog-container{
-        display: grid;  
-        height: 100%;
-       grid-template-rows: 0.2fr 0.2fr 0.5fr 0.7fr 0.8fr 0.8fr 0.8fr 0.9fr;
-       grid-template-areas: 
-       "nav nav nav nav"  
-       "encabezado encabezado encabezado encabezado"
-       "blog blog blog blog"
-       "articulo1 articulo1 articulo1 articulo1" 
-       " articulo2 articulo2 articulo2 articulo2"
-       "articulo3 articulo3 articulo3 articulo3"
-       "articulo4 articulo4 articulo4 articulo4 "
-       "footer footer footer footer";
-       grid-gap: 0.2rem;
-    
-       }
-    
-    
-       .blog{
-        grid-area: blog;
-       
-       }
-    
-       .blog h1{
-        font-size: 60px;
-        font-weight: 900;
-        margin-top: 10px;
-        text-align: center;
-        align-items: center;
-        font-family: "Poppins", sans-serif;
-       }
-    
-       .blog h2{
-        font-size: 40px;
-        font-weight: 900;
-        margin-top: 10px;
-        text-align: center;
-        align-items: center;
-        font-family: "Poppins", sans-serif;
-        color: #4cf78d;
-       }
-       
-    
-       .articulo1{
-        grid-area: articulo1;
-        background-color: #F8FF9E;
-        display: flex;
-        justify-content: space-between;
-        border-radius: 30px;
-        margin: 10px;
-        align-items: center;
-       }
-       .explicacion{
-           text-align: center;
-          }
-    
-       .explicacion h3{
-        font-size: 30px;
-        font-weight: 900;
-        margin-top: 10px;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-       }
-    
-       .explicacion p{
-        font-size: 18px;
-        font-weight: 700;
-        margin-top: 10px;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        text-align: start;
-        margin: 10px;
-       }
-    
-       .explicacion i{
-        width: 20px;
-        margin-top: 20px;
-        cursor: pointer;
-    
-    }
-        .explicacion ul{
-            font-size: 18px;
-            font-weight: 700;
-            margin-top: 10px;
-            text-align: center;
-            list-style: none;
-        }
-       
-    
-       
-       .imagen-blog img{
-        width: 300px;
-        border-radius: 30px;
-        align-items: center;
-        
-       }
-    
-       .articulo2{
-        grid-area: articulo2;
-        background-color: #F8FF9E;
-        display: flex;
-        justify-content: space-between;
-        border-radius: 30px;
-        margin: 10px;
-        align-items: center;
-       
-    
-       }
-    
-       .articulo3{
-        grid-area: articulo3;
-        background-color: #F8FF9E;
-        display: flex;
-        justify-content: space-between;
-        border-radius: 30px;
-        margin: 10px;
-        align-items: center;
-        
-    
-       }
-       
-       .articulo4{
-        grid-area: articulo4;
-        background-color:#F8FF9E;
-        display: flex;
-        justify-content: space-between;
-        border-radius: 30px;
-        margin: 10px;
-        align-items: center;
-        
-    
-       }
-    
-    
-    
-    
-    /*footer*/
-    .footer{
-        background-color: #DBF9F6;
-        grid-area: footer;
-      
-    }
-    
-    footer{
-        width: 100%;
-        padding: 10px 0px;
-       
-        
-        
-    }
-    
-    .containerFooter{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 1200px;
-        margin:auto;
-    }
-    
-    .boxFooter{
-        display: flex;
+      }
+
+    .peluqueria{
+
         flex-direction: column;
-        padding: 10px;
-        text-align: center;
-        transition: transform 0.3s ease;
-    
+        align-items: center;
+
+}
+      .peluqueria .peluqueria_canina1 img{
+        width: 340px;
+        margin-top: 5px;
+        border-radius: 50px;
+        border: 2px solid #4cf78d;
     }
     
-    .boxFooter .logo:hover img{
-       transform: scale(1.1);
+    .peluqueria .peluqueria_canina2 img{
+        width: 345px;
+        margin-top: 5px;
+        margin-left: 20px;
+        border-radius: 70px;
+        border: 2px solid #4cf78d;
+    
     }
-    
-    
-    .logo img {
-    width: 70px;
-    cursor: pointer;
-    }
-    
-    .boxFooter .textos1{
-        max-width: 355px;
-        margin-top: 22px;
-        font-weight: 500;
-        font-size: 16px;
-        font-family:"Poppins", sans-serif;
+
+
+    .sliderbar{
+        display: none;
+        }
+      
         
-    }
-    
-    
-    .boxFooter h2{
-        margin-bottom: 30px;
-        font-weight: 700;
-        color:black;
+
+      .content2 {
+        margin-top: 10px;
+      }
+      
+      .logo img {
+        width: 70px;
         cursor: pointer;
-    
-    }
-    
-    .boxFooter a{
-        margin-top:10px;
-        font-weight: 600;
-        text-decoration: none;
-        color: black
-    
+        }
+        
+        .textos1 p{
+           text-align: center;
+            
         }
     
-    .boxFooter a:hover{
-        color:#4caf50
-    }
+
+        .container1{
     
-    a
-    .boxFooter a .fa{
-        font-size: 20px;
-    
-    }
-    
-    footer .newslatter{
-        max-width: 1200px;
-        margin: auto;
-        text-align: center;
-        padding: 0 40px;
-    }
-    
-    footer .newslatter h3{
-        font-weight: 600;
-        color: #0c0b0b;
-        margin: auto;
-    }
-    footer .formulario{
-          font-family: "Holtwood One SC", serif;
-            color: black;
-            margin-top: 20px;
-            text-align: center;
-            padding: 20px 40px;
+                display: grid;  
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(8,auto);
+                grid-template-areas: 
+                "nav nav"  
+                "encabezado  encabezado"
+                "marcas marcas "
+                "destacados destacados" 
+                " medicina medicina"
+                " productos productos "
+                "invierno invierno "
+                "footer footer ";
+                grid-gap: 0.2rem;
+            
+            }
+        
+        
+            .nuestras-marcas{
+                grid-area: marcas;
+                font-family:"Poppins", sans-serif;
+                margin-top:40px;
+                border-radius: 30px; 
+                
+            
+                }
+            
+             
+            
+               .marcas-container{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content:center;
+                
+               }
+            
+               .marcas-img  img {
+                width: 50px;
+                margin: 20px;
+                border-radius: 100px;
+                border: 2px solid black;
+                transition: transform 0.3s ease ;
+                   }
+            
+            .marcas-img:hover img{
+                transform: scale(1.2);
+            }
+            
+            
+            .destacados{
+                grid-area: destacados;
+                max-height: fit-content;
+            
+            }
+            
+            .destacados-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 0.6fr;
+                grid-template-areas: 
+                "destacados1 destacados2 destacados3 ";
+                gap: 0.5rem;
+            }
+            
+            .destacados4{
+                display: none;
+            }
+
+            .medicina-veterinaria{
+                grid-area: medicina;
+                background-image: url(../img/veterinaria.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 20px;
+                text-align: end;
+               height: 300px;
+            
+            }
+            
+            .medicina-veterinaria h3{
+                margin-top: 150px;
+                margin-right: 20px;
+                font-size: 20px;
+                padding: 2px;
+                font-weight: 900;
+                font-family:"Poppins", sans-serif;
+                
+            }
+            
+            .medicina-veterinaria a{
+                text-decoration: none;
+                margin-right: 90px;
+                font-size: 10px;
+                font-weight: 900;
+                font-family:"Poppins", sans-serif;
+                padding: 8px;
+                background-color: #4caf50;
+                border-radius: 20px;
+                border: 1px solid black;
+                color: black;
+                
+            }
+            
+            .medicina-veterinaria a:hover{
+                background-color: white;
+            }
+            
+            
+            
+            .nuevos-productos{
+                grid-area: productos;
+               
+               
+            
+                }
+            
+                
+            
+            .lonuevo-container{
+                margin-top: -25px;
+                display: grid;
+                height: 100%;
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.5fr 0.5fr;
+                grid-template-areas: 
+                "lonuevo"
+                "nuevo1"
+                "nuevo2"
+                " nuevo3" 
+                "nuevo4";
+                gap: 0.5rem;
+                
+            }
+            
+            .lonuevo{
+                grid-area: lonuevo;
+                color:black;
+               
+            
+                }
+            
+            .lonuevo h3{
+                margin-top: 10px;
+                font-size: 100PX;
+                font-weight: 900;
+                font-family: "Poppins", sans-serif;
+                text-align: center;
+            }
+            
+            .nuevo1{
+                background-color:#DBF9F6;
+                 grid-area: nuevo1 ;
+                 border: solid 1px #4cf78d;
+                 margin: 10px;
+                
+            }
+            
+            .nuevo2{
+                background-color: #DBF9F6;
+                grid-area: nuevo2;
+                border: solid 1px #4cf78d;
+                margin: 10px;
+            }
+            
+            .nuevo3{
+                background-color:#DBF9F6;
+                grid-area: nuevo3;
+                border: solid 1px #4cf78d;
+                margin: 10px;
+               
+            }
+            
+            .nuevo4{
+               background-color: #DBF9F6;
+                grid-area: nuevo4;
+                border: solid 1px #4cf78d;
+                margin: 10px;
+                
+            }
+
+            .invierno{
+                justify-content: center;
+            }
+            
+            .containerFormimg{
+                background-color: white;
+                margin-top: -70px;
+            }
+            .imagenQr{
+                display: none;
+            }
+
+
+
+                
+            .blog-container{
+             display: grid;  
+             height: 100vh;
+             grid-template-columns: 1fr;  
+             grid-template-rows: repeat(8,auto);
+             grid-template-areas: 
+              "nav"  
+              "encabezado"
+              "blog"
+              "articulo1"
+              "articulo2" 
+              " articulo3" 
+              "articulo4"
+              "footer";
+              grid-gap: 0.2rem;
            
-    }
-    
-    footer .formulario .newslatterBoton{
-        width: 20%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 3px;
-        border: 1px solid #ccc;
-    }
-    
-    .botonNewslatter{
-        width: 5%;
-        margin-top: 10px;
-        padding: 10px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-    
-    .derechosAutor{
-        font-weight: 400;
-        color:black;
-        margin:30px;
-        text-align: center;
-    }
-    
-    .derechosAutor p{
-        margin-top: 10px;
-    }
-    
+              }
 
-    
-
-    
-}
+              .containerFooter{
+                justify-content: center;
+              }
+      
+   }
