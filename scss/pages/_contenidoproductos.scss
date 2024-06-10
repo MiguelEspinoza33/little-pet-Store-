@@ -1,0 +1,331 @@
+.container1{
+    
+    display: grid; 
+    height: 100%; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.1fr 0.1fr 0.4fr 1fr 0.6fr 0.6fr 0.6fr;
+    grid-template-areas: 
+    "nav nav"  
+    "marcas marcas "
+    "encabezado  encabezado"
+    "destacados destacados" 
+    " medicina medicina"
+    " productos productos "
+    "invierno invierno "
+    "footer footer ";
+    grid-gap: 0.2rem;
+
+
+    .nuestras-marcas{
+        grid-area: marcas;
+        font-family:"Poppins", sans-serif;
+        margin: 10px;
+        border-radius: 30px;
+        box-shadow: 3px 1px 10px 9px rgba(15,11,11,0.49);
+    
+        .titulo-marcas{
+            text-align: center;
+             font-size: 50px;
+             font-weight: 600;
+             font-family:"Poppins", sans-serif;
+             padding: 10px;
+             text-align: center;
+            border-radius: 30px;
+          
+           }
+
+           .marcas-container{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+            
+            .marcas-img  img {
+                width: 100px;
+                margin: 20px;
+                border-radius: 100px;
+                border: 2px solid black;
+                transition: transform 0.3s ease ;
+
+                
+             }
+
+             img:hover{
+                transform: scale(1.2);
+            }
+           }
+        }
+
+
+        .destacados{
+            grid-area: destacados;
+            max-height: fit-content;
+            box-shadow: 3px 1px 10px 9px rgba(15,11,11,0.49);
+            max-width: 1600px;
+            border-radius: 30px;
+            margin: 40px;
+
+            .destacados-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr; 
+                grid-template-areas: 
+                "destacados1 destacados2 destacados3 destacados4";
+                gap: 0.5rem;
+
+                .destacados1{
+                    grid-area: destacados1;
+                    margin-top: 20px;
+                    text-align: center;
+                    }
+
+                    .destacados2{
+                        grid-area: destacados2;
+                        margin-top: 20px;
+                        text-align: center;
+                        color: black;
+                    }
+                    
+                    .destacados3{
+                        grid-area: destacados3;
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+                    
+                    .destacados4{
+                        grid-area: destacados4;
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+
+
+                    .destacados-categorias{
+                        margin: 5px;
+                        text-decoration: none;
+                        font-size: 22px;
+                        font-family:"Poppins", sans-serif;
+                        justify-content: space-between;
+                        
+
+                        h3{
+                            color: black;
+                        }
+
+                        img {
+                            width: 100px;
+                            
+                        }
+
+                        img:hover{
+                            transform: scale(1.2);
+                            transition: transform 0.3s ease;
+                        }
+                    }
+            }
+        }
+
+
+        .medicina-veterinaria{
+            grid-area: medicina;
+            background-image: url(../img/veterinaria.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            text-align: end;
+            max-width: 1800px;
+            margin: 10px;
+        
+
+            h3{
+                margin-top: 90px;
+                margin-right: 20px;
+                font-size: 40px;
+                padding: 2px;
+                font-weight: 900;
+                font-family:"Poppins", sans-serif;
+                
+            }
+
+            a{
+                text-decoration: none;
+                margin-right: 90px;
+                font-size: 20px;
+                font-weight: 900;
+                font-family:"Poppins", sans-serif;
+                padding: 8px;
+                background-color: #4caf50;
+                border-radius: 20px;
+                border: 1px solid black;
+                color: black;
+                
+            }
+
+            a:hover{
+                background-color: white;
+            }
+        }
+
+
+        .nuevos-productos{
+            grid-area: productos;
+           
+            .lonuevo-container{
+                margin-top: 5px;
+                margin-top: 5px;
+                display: grid;
+                height: 100%;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 0.8fr 0.8fr;
+                grid-template-areas: 
+                "lonuevo nuevo1 nuevo2"
+                "lonuevo nuevo3 nuevo4";
+                gap: 0.5rem;
+
+                .carta-img{
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 10px;
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 2px;
+                    position: relative;
+                    cursor: pointer;
+        
+                    img{
+                        width: 200px;
+                        display: block;
+                         height: 200px;
+                         border-radius: 10px;
+                         border: solid 1px #4cf78d;
+                         transition: transform 0,3s ease;
+
+                         
+                         
+                    }
+
+                    img:hover{
+                        transform: scale(1.1);
+                    }
+
+                    
+        
+                   
+        
+                    h3{
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-top: 8px;
+                    }
+                }
+        
+                .descripcion-carta{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    p{
+           
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-align: center;
+                        font-family:"Poppins", sans-serif;
+                    }
+        
+                    
+                    .btn{
+                        text-decoration: none;
+                        background-color: #4cf78d;
+                        border-radius: 20px;
+                        border: solid 1px  black;  
+                        align-items: center;
+                        margin-bottom: 10px;
+                        color: black;
+                        padding: 8px;
+                        transition: 0.3S;
+        
+                        
+                     }
+
+                     .btn:hover{
+                        background-color: #DBF9F6;
+                        color: #4cf78d;
+                      }
+                }
+
+                .lonuevo{
+                    color:black;
+                    grid-area: lonuevo;
+                   
+                    h3{
+                        margin-top: 160px;
+                        font-size: 100PX;
+                        font-weight: 900;
+                        font-family: "Poppins", sans-serif;
+                        text-align: center;
+                    }
+                
+                    }
+                
+                    .nuevo1{
+                        background-color:#DBF9F6;
+                         border: solid 1px #4cf78d;
+                         grid-area: nuevo1;
+                         box-shadow: -8px 4px 8px -1px rgba(3,237,211,0.77);
+                         margin: 10px;
+                    
+                         }
+                    
+                    .nuevo2{
+                        background-color: #DBF9F6;
+                        border: solid 1px #4cf78d;
+                        grid-area: nuevo2;
+                        box-shadow: -8px 4px 8px -1px rgba(3,237,211,0.77);
+                        margin: 10px;
+                    }
+                    
+                    .nuevo3{
+                        background-color:#DBF9F6;
+                        border: solid 1px #4cf78d;
+                        grid-area: nuevo3;
+                        box-shadow: -8px 4px 8px -1px rgba(3,237,211,0.77);
+                        margin: 10px;
+                    }
+                    
+                    .nuevo4{
+                       background-color: #DBF9F6;
+                        border: solid 1px #4cf78d;
+                        grid-area: nuevo4;
+                        box-shadow: -8px 4px 8px -1px rgba(3,237,211,0.77);
+                        margin: 10px;
+                    }
+                    
+                }
+        
+            }
+        
+
+            .invierno{
+                grid-area: invierno;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px;
+
+                a img{
+                    width: 300px;
+                    transition: transform 0.3s ease;
+
+                    
+                }
+                
+                img:hover {
+                    transform: scale(1.2);
+                }
+            }
+            
+}

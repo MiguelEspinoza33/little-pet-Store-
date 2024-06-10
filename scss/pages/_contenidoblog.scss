@@ -1,0 +1,142 @@
+.blog_container{
+    display: grid;  
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+   grid-template-rows: 0.2fr 0.2fr 0.3fr 0.5fr 0.5fr 0.5fr;
+   grid-template-areas: 
+   "nav nav"  
+   "encabezado encabezado"
+   "blog blog"
+   "articulo1 articulo2" 
+   " articulo3 articulo4"
+   "footer footer";
+   grid-gap: 0.2rem;
+ 
+   
+
+   .blog{
+    grid-area: blog;
+   
+    h1{
+        font-size: 60px;
+        font-weight: 900;
+        margin-top: 60px;
+        text-align: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+       }
+
+       h2{
+        font-size: 40px;
+        font-weight: 900;
+        margin-top: 10px;
+        text-align: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        color: #4cf78d;
+       }
+   }
+
+
+   .articulo1{
+    grid-area: articulo1;
+    background-color: #F8FF9E;
+    border-radius: 30px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .articulo2{
+    grid-area: articulo2;
+    background-color: #F8FF9E;
+    border-radius: 30px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   
+    
+    }
+   
+
+   .imagen-blog2 img{
+    width: 260px;
+    border-radius: 30px;
+    margin: auto;
+    
+   }
+   .articulo3{
+    grid-area: articulo3;
+    background-color: #F8FF9E;
+    border-radius: 30px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+   }
+   
+   .articulo4{
+    grid-area: articulo4;
+    background-color: #F8FF9E;
+    border-radius: 30px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .explicacion{
+    text-align: center;
+
+    h3{
+        font-size: 30px;
+        font-weight: 900;
+        margin-top: 10px;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+       }
+
+       p{
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 10px;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        text-align: start;
+        margin: 10px;
+        text-align: center;
+       }
+
+       i{
+        width: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+    
+    }
+
+    ul{
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 10px;
+        text-align: center;
+        list-style: none;
+    }
+   }
+
+   .imagen-blog img{
+    width: 300px;
+    border-radius: 30px;
+    margin: 20px;
+    
+   }
+
+   }

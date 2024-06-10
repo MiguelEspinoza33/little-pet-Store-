@@ -1,0 +1,410 @@
+
+
+@media screen and (max-width:768px){
+
+    .container{
+        grid-template-columns: 1fr ;
+        grid-template-rows:repeat(9,auto);
+        grid-template-areas: 
+        "nav nav " 
+        "encabezado encabezado" 
+        "categorias categorias"
+        "main main" 
+        "peluqueria peluqueria"
+        "sliderbar sliderbar"
+        "content1 content2  "
+        "content3 content4"
+       "content5 content6 " 
+        "footer footer";
+
+        .nav{
+            .logo{
+                display: none;
+            }
+            .navbar i{
+                display: flex;
+            }
+        }
+
+        .container__total1{
+            width:100px;
+            padding:0;
+            font-family:"Poppins", sans-serif;
+            margin-top:-80px; 
+            margin-left: 50px;
+             
+        }
+        
+        .container__img{
+          display: none;
+         
+         }
+         
+       
+         .container__total1 .container_info p{
+            text-align:center;
+            font-size:20px;
+            
+         }
+         
+         .categorias{
+            background-color: #DBF9F6;  
+              grid-area:categorias;
+              max-width:100%;
+              align-items:center; 
+        
+          }
+    
+          .containercards{
+            justify-content: center;
+          }
+    
+        .peluqueria{
+    
+            flex-direction: column;
+            align-items: center;
+    
+    }
+          .peluqueria .peluqueria_canina1 img{
+            width: 340px;
+            margin-top: 5px;
+            border-radius: 50px;
+            border: 2px solid #4cf78d;
+        }
+        
+        .peluqueria .peluqueria_canina2 img{
+            width: 345px;
+            margin-top: 5px;
+            margin-left: 20px;
+            border-radius: 70px;
+            border: 2px solid #4cf78d;
+        
+        }
+    
+    
+        .sliderbar{
+            display: none;
+            }
+          
+            
+    
+          .content2 {
+            margin-top: 10px;
+          }
+          
+          .logo img {
+            width: 70px;
+            cursor: pointer;
+            }
+            
+            .textos1 p{
+               text-align: center;
+                
+            }
+        
+            .containerFooter{
+                justify-content: center;
+              }
+    }
+    
+        
+    
+    
+    .encabezado{
+        align-items:end;
+        margin-top:90px;
+        font-size:9px;
+    }
+   
+
+    
+
+        .container1{
+    
+                display: grid;  
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(8,auto);
+                grid-template-areas: 
+                "nav nav"  
+                "encabezado  encabezado"
+                "marcas marcas "
+                "destacados destacados" 
+                " medicina medicina"
+                " productos productos "
+                "invierno invierno "
+                "footer footer ";
+                grid-gap: 0.2rem;
+
+                .nav{
+                    .logo{
+                        display: none;
+                    }
+                    .navbar i{
+                        display: flex;
+                    }
+                }
+
+                .nuestras-marcas{
+                    grid-area: marcas;
+                    font-family:"Poppins", sans-serif;
+                    margin-top:40px;
+                    border-radius: 30px; 
+                    
+                
+                    }
+                
+                 
+                
+                   .marcas-container{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content:center;
+                    
+                   }
+                
+                   .marcas-img  img {
+                    width: 50px;
+                    margin: 20px;
+                    border-radius: 100px;
+                    border: 2px solid black;
+                    transition: transform 0.3s ease ;
+                       }
+                
+                .marcas-img:hover img{
+                    transform: scale(1.2);
+                }
+                
+                
+                .destacados{
+                    grid-area: destacados;
+                    max-height: fit-content;
+                
+                }
+                
+                .destacados-container{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 0.6fr;
+                    grid-template-areas: 
+                    "destacados1 destacados2 destacados3 ";
+                    gap: 0.5rem;
+                }
+                
+                .destacados4{
+                    display: none;
+                }
+    
+                .medicina-veterinaria{
+                    grid-area: medicina;
+                    background-image: url(../img/veterinaria.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border-radius: 20px;
+                    text-align: end;
+                   height: 300px;
+                
+                }
+                
+                .medicina-veterinaria h3{
+                    margin-top: 150px;
+                    margin-right: 20px;
+                    font-size: 20px;
+                    padding: 2px;
+                    font-weight: 900;
+                    font-family:"Poppins", sans-serif;
+                    
+                }
+                
+                .medicina-veterinaria a{
+                    text-decoration: none;
+                    margin-right: 90px;
+                    font-size: 10px;
+                    font-weight: 900;
+                    font-family:"Poppins", sans-serif;
+                    padding: 8px;
+                    background-color: #4caf50;
+                    border-radius: 20px;
+                    border: 1px solid black;
+                    color: black;
+                    
+                }
+                
+                .medicina-veterinaria a:hover{
+                    background-color: white;
+                }
+                
+                
+                
+                .nuevos-productos{
+                    grid-area: productos;
+
+                   
+                
+                    }
+                
+                    
+                
+                .lonuevo-container{
+                    margin-top: -25px;
+                    display: grid;
+                    height: 100%;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+                    grid-template-areas: 
+                   "lonuevo"
+                    "nuevo1"
+                    "nuevo2"
+                    " nuevo3" 
+                    "nuevo4";
+                    gap: 0.5rem;
+                    
+                }
+                
+                .lonuevo{
+                    grid-area: lonuevo;
+                    color:black;
+                    display: none;
+                   
+                
+                    }
+                
+                .lonuevo h3{
+                    margin-top: 10px;
+                    font-size: 100PX;
+                    font-weight: 900;
+                    font-family: "Poppins", sans-serif;
+                    text-align: center;
+                
+                }
+                
+                .nuevo1{
+                    background-color:#DBF9F6;
+                     grid-area: nuevo1 ;
+                     border: solid 1px #4cf78d;
+                     margin: 10px;
+                    
+                }
+                
+                .nuevo2{
+                    background-color: #DBF9F6;
+                    grid-area: nuevo2;
+                    border: solid 1px #4cf78d;
+                    margin: 10px;
+                }
+                
+                .nuevo3{
+                    background-color:#DBF9F6;
+                    grid-area: nuevo3;
+                    border: solid 1px #4cf78d;
+                    margin: 10px;
+                   
+                }
+                
+                .nuevo4{
+                   background-color: #DBF9F6;
+                    grid-area: nuevo4;
+                    border: solid 1px #4cf78d;
+                    margin: 10px;
+                    
+                }
+    
+                .invierno{
+                    justify-content: center;
+                }
+                
+                .containerFooter{
+                    justify-content: center;
+                  }   
+    
+            
+            }
+       
+           .formularioImagen{
+            .containerFormimg{
+                background-color: white;
+                margin-top: -70px;
+                
+        
+            }
+           }
+                
+        
+        
+        .imagenQr{
+            display: none;
+        }
+        
+            
+            
+
+
+                
+            .blog_container{
+                display: grid;  
+                height: 10vh;
+                grid-template-columns: 1fr ;  
+                grid-template-rows: 0.1fr 0.1fr 0.3fr repeat(5,0.3fr);
+                grid-template-areas: 
+                 "nav"  
+                 "encabezado"
+                 "blog"
+                 "articulo1"
+                  "articulo2"
+                 " articulo3" 
+                 "articulo4"
+                 "footer";
+                 grid-gap: 0.2rem;
+                 
+
+                 .nav{
+                    .logo{
+                        display: none;
+                    }
+                    .navbar i{
+                        display: flex;
+                    }
+                }
+
+                   .blog{
+                    h1{
+                        font-size: 50px;
+                        font-weight: 900;
+                        margin-top: 20px;
+                        text-align: center;
+                        align-items: center;
+                        font-family: "Poppins", sans-serif;
+                       }
+                
+                       h2{
+                        font-size: 30px;
+                        font-weight: 900;
+                        margin-top: 10px;
+                        text-align: center;
+                        align-items: center;
+                        font-family: "Poppins", sans-serif;
+                        color: #4cf78d;
+                       }
+                   }
+                   .containerFooter{
+                    justify-content: center;
+                  }
+                   }
+             
+
+      
+
+      
+   }
+
+   
+
+
+
+       
+    
+             
+    
+
+    
+

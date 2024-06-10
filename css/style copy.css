@@ -1191,7 +1191,7 @@ cursor: pointer;
     color:#4caf50
 }
 
-
+a
 .boxFooter a .fa{
     font-size: 20px;
 
@@ -1274,13 +1274,13 @@ footer .formulario .newslatterBoton{
     
    
     .nav .logo{
-        display: none;
-     }
-     .navbar ul li{
+       display: none;
+    }
+
+    .navbar ul li{
         margin: 0px 10px;
         
     }
-    
     .encabezado{
         align-items:end;
         margin-top:90px;
@@ -1288,6 +1288,9 @@ footer .formulario .newslatterBoton{
     }
     .navbar i{
         display: flex;
+    }
+    .main{
+        background-image:none;
     }
 
     .container__total1{
@@ -1299,7 +1302,7 @@ footer .formulario .newslatterBoton{
     }
     
     .container__img{
-      display: none;
+        position:absolute; 
      
      }
      
