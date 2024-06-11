@@ -1,107 +1,113 @@
-.contactoTitulo {
-    h1{
-        margin-top: 100px;
-        font-size: 36px;
-        font-weight: 900;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        color: black;
-    }
 
-    h2{
-        font-size: 30px;
-        font-weight: 900;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        color: aquamarine;
-    }
+.container__contacto{
 
-    
-}
-
-.formularioImagen{
-    width: 100%;
-    padding-bottom: 60px;
-    font-family: "Poppins", sans-serif;
-    margin-top: 150px;  
-
-    .containerFormimg{
-        max-width: 1100px;
-        margin: auto;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        background-color: #F8FF9E;
-        border-radius: 20px;
-
-        .formularioContacto{
-            width: 400px;
-            margin-left: 50px;
-            padding: 20px;
-            background-color: #f2f2f2;
-            border-radius: 5px;
-            z-index: 2;
-            
-
-            h3{
-                text-align: center;
-                margin-bottom: 20px;
-            }
-
-            label {
-                display: block;
-                font-weight: bold;
-                margin-bottom: 5px;
-              }
-
-              input[type="text"],
-              input[type="email"],
-              input[type="password"] {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 10px;
-                border-radius: 3px;
-                border: 1px solid #ccc;
-              }
-
-              input[type="submit"] {
-                width: 100%;
-                margin-top: 10px;
-                padding: 10px;
-                background-color: #4caf50;
-                color: white;
-                border: none;
-                border-radius: 3px;
-                cursor: pointer;
-              }
-
-              input[type="submit"]:hover {
-                background-color: #45a049;
-              }
-            
+    .contactoTitulo {
+        h1{
+            margin-top: 100px;
+            font-size: 36px;
+            font-weight: 900;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            color: black;
         }
+    
+        h2{
+            font-size: 30px;
+            font-weight: 900;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            color: aquamarine;
+        }
+    
         
     }
-
-
-    }
-
-    .imagenQr{
-        position: relative;
-
-        img{
-            position: absolute;
-            bottom: 100px;
-            right: 0px;
-            width: 400px;
-            border-radius: 40px;
-        }
-
-        .tituloApp{
-            color:black;
-            margin-right: 28px;
+    
+    .formularioImagen{
+        width: 100%;
+        padding-bottom: 60px;
+        font-family: "Poppins", sans-serif;
+        margin-top: 150px;  
+    
+        .containerFormimg{
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            background-color: #F8FF9E;
+            border-radius: 20px;
+    
+            .formularioContacto{
+                width: 400px;
+                margin-left: 50px;
+                padding: 20px;
+                background-color: #f2f2f2;
+                border-radius: 5px;
+                z-index: 2;
+                
+    
+                h3{
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+    
+                label {
+                    display: block;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                  }
+    
+                  input[type="text"],
+                  input[type="email"],
+                  input[type="password"] {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border-radius: 3px;
+                    border: 1px solid #ccc;
+                  }
+    
+                  input[type="submit"] {
+                    width: 100%;
+                    margin-top: 10px;
+                    padding: 10px;
+                    background-color: #4caf50;
+                    color: white;
+                    border: none;
+                    border-radius: 3px;
+                    cursor: pointer;
+                  }
+    
+                  input[type="submit"]:hover {
+                    background-color: #45a049;
+                  }
+                
+            }
             
         }
-    }
     
+    
+        }
+    
+        .imagenQr{
+            position: relative;
+    
+            img{
+                position: absolute;
+                bottom: 100px;
+                right: 0px;
+                width: 400px;
+                border-radius: 40px;
+            }
+    
+            .tituloApp{
+                color:black;
+                margin-right: 28px;
+                
+            }
+        }
+        
+
+}
+

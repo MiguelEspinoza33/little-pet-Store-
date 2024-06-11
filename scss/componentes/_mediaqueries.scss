@@ -319,21 +319,60 @@
     
             
             }
-       
-           .formularioImagen{
+       .container__contacto{
+
+        nav{
+           
+            .container_header{
+
+                .logo{
+                    display: none;
+                }
+                .navbar i{
+                    display: flex;
+                }
+            }
+           
+
+            .containercards{
+                justify-content: center;
+              }
+           
+        }
+        .formularioImagen{
             .containerFormimg{
                 background-color: white;
                 margin-top: -70px;
                 
-        
+                
             }
            }
-                
-        
-        
-        .imagenQr{
+
+           .containerFooter{
+            justify-content: center;
+          }   
+           
+          .imagenQr{
             display: none;
         }
+       }
+           
+        
+        .container_tiendas{
+            .nav{
+                .logo{
+                    display: none;
+                }
+                .navbar i{
+                    display: flex;
+                }
+            }
+            
+            .containerFooter{
+                justify-content: center;
+              }
+        }
+       
         
             
 
